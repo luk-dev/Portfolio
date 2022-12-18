@@ -1,0 +1,20 @@
+body {
+    background-color: $dark;
+    color: $white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    color: $primary;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}

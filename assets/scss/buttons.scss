@@ -1,0 +1,17 @@
+.btn {
+  position: relative;
+  border: 0;
+  text-decoration: none;
+  color: $primary;
+  font-size: 15px;
+  padding: 1.25rem 1.75rem;
+  display: inline-block;
+  border: 1px solid $primary;
+  border-radius: 3px;
+  transition: background 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background-color: darken($primary, 39);
+  }
+}

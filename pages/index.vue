@@ -1,13 +1,13 @@
 <template>
-  <div>
-    <Header/>
-    <section class="index__wr">
-      <div class="container">
-        <Projects/>
-      </div>
-    </section>
+<div class="index">
+  <Sidebar/>
+  <div class="index__wr">
+    <Welcome/>
+    <Projects/>
     <Footer/>
   </div>
+</div>
+
 </template>
 
 <script>
@@ -19,9 +19,9 @@ export default {
 <style lang="scss" scoped>
   .index {
     &__wr {
-      max-width: 1170px;
-      margin: 0 auto;
-      padding: 0 15px;
+      @media screen and (min-width: $md) {
+        margin-left: 10rem;
+      }
     }
   }
 </style>

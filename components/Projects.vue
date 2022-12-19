@@ -1,60 +1,56 @@
 <template>
-    <div class="projects">
-        <ul class="projects__list">
-            <li class="project" v-for="(item, index) in projects_data">
-                <figure>
-                    <NuxtLink :to="item.link" target="_blank"><img class="project__logo" :src="require(`~/assets/images/${item.logo}`)" :alt="item.title"></NuxtLink>
-                </figure>
-            </li>
-        </ul>
+  <section id="Projects" class="projects">
+    <div class="container">
+      <h2>{{ $t('projects_heading') }}</h2>
+      <ul class="projects__list">
+        <Project v-for="project in projects_data" v-bind:project="project" v-bind:key="project.name"/>
+      </ul>
     </div>
+  </section>
 </template>
 
 <script>
+import LinkIcon from "~/assets/svg/link-svgrepo-com.svg?raw";
 export default {
   data: () => ({
     projects_data: [
       {
-        title: 'forcecamp.pl',
-        link: 'https://forcecamp.pl/',
-        logo: 'forcecamp-logo.svg',
-        build_with: ['Wordpress', 'Woocommerce', 'SCSS' ]
+        name: 'Forcecamp store',
+        date: '02/2022',
+        url: 'https://forcecamp.pl/',
+        type: 'Ecommerce',
+        icon: LinkIcon,
+        frame: 'frame_forcecamp.jpg',
+        tech: ['Wordpress', 'Woocommerce', 'Gutenberg', 'ACF', 'SCSS'],
+        desc: 'Ecommerce store based on understrap theme/ Included css style inline/ Integration with delivery and payment modules/ RWD '
       },
       {
-        title: 'adhurt.pl',
-        link: 'https://adhurt.pl/',
-        logo: 'adhurtpl-logo.png',
-        build_with: ['Wordpress', 'Woocommerce', 'SCSS' ]
+        name: 'Adhurt B2B store',
+        date: '10/2022',
+        url: 'https://adhurt.pl/',
+        type: 'Ecommerce',
+        icon: LinkIcon,
+        frame: 'frame_adhurt.jpg',
+        tech: ['Wordpress', 'Woocommerce', 'Gutenberg', 'ACF', 'SCSS'],
+        desc: 'Ecommerce store based on understrap theme/ Included css style inline/ Created custom registration form/ Prices visible only for registered/ RWD'
       }
     ]
   }),
 }
 </script>
 
-<style lang="scss" scoped>
-    .projects {
-        margin: 10rem 0;
-        &__list {
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 40px;
-            @media (min-width: 768px) {
-                flex-direction: row;
-            }
-        }
-    }
-    .project {
+<style lang="scss">
+  .projects {
+      margin: 10rem 0;
+      &__list {
+        padding: 0;
+        margin: 0;
+        margin-top: 2rem;
+        list-style: none;
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
-
-        &__logo {
-            max-width: 240px;
-        }
+        justify-content: center;
+        gap: 40px;
     }
+  }
 </style>

@@ -12,7 +12,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'LUKDEV Lukasz Dabik portfolio website' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -23,7 +23,9 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'normalize.css/normalize.css',
-    '~/assets/scss/global.scss'
+    '~/assets/css/fonts.css',
+    '~/assets/scss/global.scss',
+    '~/assets/scss/buttons.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -36,7 +38,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     '@nuxtjs/style-resources',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@nuxtjs/svg'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -56,7 +59,7 @@ export default {
 
   googleFonts: {
     families: {
-      Roboto: true,
+      Roboto: [400, 600],
     },
     display: 'swap',
     prefetch: true
@@ -69,7 +72,12 @@ export default {
       fallbackLocale: 'en',
       messages: {
         en: {
-          header_heading: 'Portfolio Lukasz Dabik',
+          projects_heading: 'Latest projects',
+          header_heading: "Portfolio Lukasz Dabik",
+          welcome_hi: "Hi, my name is",
+          welcome_h1: "Lukasz Dabik",
+          welcome_h2: "Web Developer/ +8 years experience",
+          welcome_btn: "See my projects",
           footer_copyright: 'Copyright © LUK-DEV Lukasz Dabik'
         }
       }

@@ -19,7 +19,7 @@
     margin: 10rem 0;
 
     @media screen and (min-width: $md) {
-      min-height: 70vh;
+      min-height: 90vh;
       margin: 0;
     }
 

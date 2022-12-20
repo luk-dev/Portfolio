@@ -1,5 +1,5 @@
 <template>
-  <li class="project">
+  <li class="project" data-aos="fade-up" data-aos-delay="300">
     <figure class="project__frame">
       <a :href="project.url" target="_blank"><img class="" :src="require(`~/assets/images/${project.frame}`)" :alt="project.name"></a>
     </figure>

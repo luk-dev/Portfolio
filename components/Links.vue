@@ -1,7 +1,7 @@
 <template>
   <ul class="links">
     <li v-for="(link, index) in links">
-      <a class="links__link" :href="link.url" target="_blank" :aria-label="link.name" v-html="link.icon"></a>
+      <a class="links__link" :href="link.url" target="_blank" :aria-label="link.name" :title="link.title" v-html="link.icon" rel="noreferrer"></a>
     </li>
   </ul>
 </template>
@@ -17,24 +17,28 @@
     links: [
       {
         name: 'linkedin',
-        url: 'https://www.linkedin.com/in/lukasz-dabik-3b8299bb/',
+        title: 'LinkedIn profile',
+        url: 'https://www.linkedin.com/in/lukasz-dabik',
         icon: LinkedinIcon,
       },
       {
         name: 'github',
+        title: 'Github profile',
         url: 'https://github.com/luk-dev',
         icon: GithubIcon
       },
       {
+        name: 'resume',
+        title: 'Resume Lukasz Dabik',
+        url: 'https://drive.google.com/file/d/1Z6biUa7qFAsvc7yt3LJPgpNvRsmWWxqS/view?usp=sharing',
+        icon: ResumeIcon,
+      },
+      {
         name: 'email',
+        title: 'Email to Lukasz Dabik',
         url: 'mailto:lukasz.dabik@gmail.com',
         icon: EmailIcon,
-      },
-      // {
-      //   name: 'resume',
-      //   url: '#!',
-      //   icon: ResumeIcon,
-      // }
+      }
     ]
   }),
   };

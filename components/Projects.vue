@@ -15,7 +15,7 @@ export default {
   data: () => ({
     projects_data: [
       {
-        name: 'Forcecamp store',
+        name: 'Forcecamp',
         date: '02/2022',
         url: 'https://forcecamp.pl/',
         type: 'Ecommerce',
@@ -25,7 +25,7 @@ export default {
         desc: 'Ecommerce store based on understrap theme/ Included css style inline/ Integration with delivery and payment modules/ RWD '
       },
       {
-        name: 'Adhurt B2B store',
+        name: 'Adhurt B2B',
         date: '10/2022',
         url: 'https://adhurt.pl/',
         type: 'Ecommerce',
